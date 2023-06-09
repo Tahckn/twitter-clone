@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: #000000;
+    color: #e7e9ea;
+}
+
+@layer components {
+    .hoverEffect {
+        @apply hover:bg-[#181818] transition-colors flex items-center justify-center duration-75 cursor-pointer rounded-full p-3;
+    }
+}
