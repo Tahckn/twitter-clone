@@ -24,9 +24,9 @@ export default function Sidebar()
             </div>
             {/* Button  */}
 
-            <button className="bg-[#348ed7] shadow-md brightness-105 duration-150 hover:brightness-95 transition-all hidden xl:inline text-lg font-bold text-white rounded-full w-56 h-12">Tweet</button>
+            <button className="hoverTweet xl:inline w-56 h-12">Tweet</button>
 
-            <button className="bg-[#348ed7] p-2 rounded-full shadow-md brightness-105 duration-150 hover:brightness-95 transition-all xl:hidden flex items justify-center">
+            <button className="hoverTweet p-2 xl:hidden flex items justify-center">
                 <PencilSquareIcon className="h-7"/>
             </button>
 

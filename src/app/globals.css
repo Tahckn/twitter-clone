@@ -11,4 +11,7 @@ body {
     .hoverEffect {
         @apply hover:bg-[#181818] transition-colors flex items-center justify-center duration-75 cursor-pointer rounded-full p-3;
     }
+    .hoverTweet {
+        @apply bg-[#348ed7] text-lg font-bold text-white rounded-full shadow-md brightness-105 duration-150 hover:brightness-95 transition-all hidden
+    }
 }
