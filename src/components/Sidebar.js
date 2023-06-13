@@ -1,18 +1,18 @@
 import Image from "next/image";
 import SidebarMenuItem from "./SidebarMenuItem";
 import { HomeIcon } from "@heroicons/react/24/solid";
-import { MagnifyingGlassIcon, UserIcon, BellIcon, EllipsisHorizontalCircleIcon, EllipsisHorizontalIcon, EnvelopeIcon, ClipboardIcon, BookmarkIcon } from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon, UserIcon, BellIcon, EllipsisHorizontalCircleIcon, EllipsisHorizontalIcon, EnvelopeIcon, ClipboardIcon, BookmarkIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
 
 export default function Sidebar()
 {
     return (
-        <div className="flex flex-col p-2 xl:items-start fixed h-full">
+        <div className="sm:flex hidden flex-col p-2 xl:items-start fixed h-full">
             {/* Tw Logo  */}
             <div className="hoverEffect ">
                 <Image src="/Logo.svg" width='34' height='34' alt="logo" />
             </div>
             {/* Menu  */}
-            <div className="mt-4 mb-2.5 xl:items-start">
+            <div className="mt-4 flex flex-col space-y-2 mb-6 xl:items-start">
                 <SidebarMenuItem text="Home" Icon={HomeIcon} active/>
                 <SidebarMenuItem text="Explore" Icon={MagnifyingGlassIcon} />
                 <SidebarMenuItem text="Notifications" Icon={BellIcon} />
@@ -25,6 +25,10 @@ export default function Sidebar()
             {/* Button  */}
 
             <button className="bg-[#348ed7] shadow-md brightness-105 duration-150 hover:brightness-95 transition-all hidden xl:inline text-lg font-bold text-white rounded-full w-56 h-12">Tweet</button>
+
+            <button className="bg-[#348ed7] p-2 rounded-full shadow-md brightness-105 duration-150 hover:brightness-95 transition-all xl:hidden flex items justify-center">
+                <PencilSquareIcon className="h-7"/>
+            </button>
 
             {/* Mini-Profile  */}
 
