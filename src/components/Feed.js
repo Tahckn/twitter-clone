@@ -25,7 +25,7 @@ export default function Feed() {
   ]
 
   return (
-    <div className='xl:ml-[370px] border-x border-[#2f3336] xl:min-w-[576px] sm:ml-[80px] flex-grow max-w-xl'>
+    <div className='xl:ml-[283px] border-x border-[#2f3336] xl:min-w-[598px] sm:ml-[80px] flex-grow max-w-xl'>
 
       {/* Header  */}
 
