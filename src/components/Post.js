@@ -1,4 +1,5 @@
 import { EllipsisHorizontalIcon, ChatBubbleLeftIcon, TrashIcon, HeartIcon, ChartBarSquareIcon, ShareIcon, ArrowUpIcon, ArrowUpTrayIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 
 export default function Post({post}) {
@@ -6,7 +7,7 @@ export default function Post({post}) {
     <div className='flex p-3 cursor-pointer border-b border-[#2f3336]'>
         {/* User Image */}
 
-        <img className='h-11 w-11 rounded-full mr-4' src={post.userImg} alt="user-image" />
+        <Image className='h-11 w-11 rounded-full mr-4' src={post.userImg} width={100} height={100} alt="user-image" />
         
         {/*  Right Side */}
         <div>
@@ -28,7 +29,7 @@ export default function Post({post}) {
         <p className='text-[#e7e9ea] mb-2 sm:text-[16x] text-[15px]'>{post.text}</p>
 
         {/* Post Image */}
-        <img className='rounded-2xl mr-2 border border-[#2f3336] ' src={post.img} alt="post-image" />
+        <Image width={520} height={300} className='rounded-2xl mr-2 border border-[#2f3336] ' src={post.img} alt="post-image" />
 
         {/* Icons */}
 

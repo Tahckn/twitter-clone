@@ -1,13 +1,33 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import News from "./News";
 
-export default function Widgets() {
+export default async function Widgets() {
+
+  async function getHeaders() {
+    const res = await fetch("https://saurav.tech/NewsAPI/top-headlines/category/business/us.json",{cache:'no-store'});
+    const data = await res.json();
+    return data;
+  }
+
+  const headers = await getHeaders();
+
+
+
   return (
-    <div className="w-[290px] xl:w-[350px] ml-8 hidden lg:inline">
+    <div className="xl:w-[350px] lg:w-[290px] ml-8 hidden lg:inline">
         <div className="sticky top-0 pt-1.5 pb-[14px] z-50 border-b-2 border-[#16181c]">
-            <div className=" flex group p-3 rounded-full items-center relative">
+            <div className="xl:w-[350px] lg:w-[290px] flex group p-3 rounded-full items-center relative">
                 <MagnifyingGlassIcon className=" h-5 z-50 group-focus-within:text-[#5ba3e6] text-[#71767b]"/>
-                <input type="text" placeholder="Search Twitter" className=" pl-11 absolute rounded-full bg-[#202327] text-[15px] py-[21px] placeholder:text-[15px] inset-0 border-none focus:bg-[#000] text-white focus:ring-1 focus:ring-[#3a9def]"/>
+                <input type="text" placeholder="Search Twitter" className="w-full leading-3 h-0 pl-11 absolute rounded-full bg-[#202327] text-[15px] py-[21px] placeholder:text-[15px] inset-0 border-none focus:bg-[#000] text-white focus:ring-1 focus:ring-[#3a9def]"/>
             </div>
+        </div>
+
+        <div className="bg-[#16181c] rounded-2xl  mt-4  w-full">
+          <h4 className="px-4 py-2 text-[20px] font-bold text-white">What&apos;s Happening</h4>
+          {headers.articles.slice(0,9).map((header)=>(
+            <News key={header.title} header={header}/>
+          ))}
+          <button className="hover:bg-[#1d1f23] text-[15px] text-[#1D9BF0] rounded-b-2xl py-4 px-4 w-full text-start">Show more</button>
         </div>
     </div>
   )

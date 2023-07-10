@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+   images:{
+    domains:[
+        'bitcoinmagazine.com'
+    ],
+    remotePatterns:[
+        {
+            protocol:'https',
+            hostname:'**'
+        }
+    ]
+   }
+}
 
 module.exports = nextConfig
