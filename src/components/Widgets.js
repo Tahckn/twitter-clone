@@ -1,17 +1,12 @@
+'use client'
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import News from "./News";
-
-export default async function Widgets() {
-
-  async function getHeaders() {
-    const res = await fetch("https://saurav.tech/NewsAPI/top-headlines/category/business/us.json",{cache:'no-store'});
-    const data = await res.json();
-    return data;
-  }
-
-  const headers = await getHeaders();
+import { useState } from "react";
 
 
+export default function Widgets({headlines}) {
+
+  const [headlineNumber, setHeadlineNumber] = useState(9);
 
   return (
     <div className="xl:w-[350px] lg:w-[290px] ml-8 hidden lg:inline">
@@ -24,10 +19,10 @@ export default async function Widgets() {
 
         <div className="bg-[#16181c] rounded-2xl  mt-4  w-full">
           <h4 className="px-4 py-2 text-[20px] font-bold text-white">What&apos;s Happening</h4>
-          {headers.articles.slice(0,9).map((header)=>(
-            <News key={header.title} header={header}/>
+          {headlines.slice(0,headlineNumber).map((headline)=>(
+            <News key={headline.title} headline={headline}/>
           ))}
-          <button className="hover:bg-[#1d1f23] text-[15px] text-[#1D9BF0] rounded-b-2xl py-4 px-4 w-full text-start">Show more</button>
+          <button onClick={()=>setHeadlineNumber(headlineNumber + 3)} className="hover:bg-[#1d1f23] text-[15px] text-[#1D9BF0] rounded-b-2xl py-4 px-4 w-full text-start">Show more</button>
         </div>
     </div>
   )
