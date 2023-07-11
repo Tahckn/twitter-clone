@@ -1,4 +1,4 @@
-import { EllipsisHorizontalIcon, ChatBubbleLeftIcon, TrashIcon, HeartIcon, ChartBarSquareIcon, ShareIcon, ArrowUpIcon, ArrowUpTrayIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { EllipsisHorizontalIcon, ChatBubbleLeftIcon, TrashIcon, HeartIcon, ArrowUpTrayIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 
 
@@ -16,7 +16,7 @@ export default function Post({post}) {
         <div className='flex items-start'>
         {/* Post User Info */}
         <div className='flex items-center'>
-        <h4 className='font-bold text-[15px] sm:text-[16px] hover:underline'>{post.name}</h4>
+        <h4 className='font-bold text-[15px] sm:text-[16px] hover:underline decoration-2'>{post.name}</h4>
         <span className='text-sm sm:text-[15px] text-[#71767b] ml-1'>@{post.username} · </span>
         <span className='text-sm hover:underline sm:text-[15px] text-[#71767b] ml-1' >{post.timestamp}</span>
         </div>

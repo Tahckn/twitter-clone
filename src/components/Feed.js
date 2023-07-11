@@ -21,7 +21,34 @@ export default function Feed() {
       img:"https://pbs.twimg.com/media/F0oY1PwXsAAK829?format=jpg&name=small",
       text:'Randi Vakfinın Artık Sürdürülmeyen 1 Milyon Dolar Para Ödülü Neyi Amaçladı?',
       timestamp:'2 days ago'
-    }
+    },
+    {
+      id : '3',
+      name :"Recep Baltaş",
+      username : 'buckberi',
+      userImg: 'https://pbs.twimg.com/profile_images/1617949667731423232/8-z9wqd-_400x400.jpg',
+      img:"https://pbs.twimg.com/media/F0oY1PwXsAAK829?format=jpg&name=small",
+      text:'Randi Vakfinın Artık Sürdürülmeyen 1 Milyon Dolar Para Ödülü Neyi Amaçladı?',
+      timestamp:'2 days ago'
+    },
+    {
+      id : '4',
+      name :"Recep Baltaş",
+      username : 'buckberi',
+      userImg: 'https://pbs.twimg.com/profile_images/1617949667731423232/8-z9wqd-_400x400.jpg',
+      img:"https://pbs.twimg.com/media/F0oY1PwXsAAK829?format=jpg&name=small",
+      text:'Randi Vakfinın Artık Sürdürülmeyen 1 Milyon Dolar Para Ödülü Neyi Amaçladı?',
+      timestamp:'2 days ago'
+    },
+    {
+      id : '5',
+      name :"Recep Baltaş",
+      username : 'buckberi',
+      userImg: 'https://pbs.twimg.com/profile_images/1617949667731423232/8-z9wqd-_400x400.jpg',
+      img:"https://pbs.twimg.com/media/F0oY1PwXsAAK829?format=jpg&name=small",
+      text:'Randi Vakfinın Artık Sürdürülmeyen 1 Milyon Dolar Para Ödülü Neyi Amaçladı?',
+      timestamp:'2 days ago'
+    },
   ]
 
   return (
