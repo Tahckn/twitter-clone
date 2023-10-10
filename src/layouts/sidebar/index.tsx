@@ -1,14 +1,12 @@
-import Logo from "@/assets/icons/logo.svg"
-import {Link} from "react-router-dom"
+import {Logo} from "@/layouts/sidebar/logo"
+import {Menu} from "@/layouts/sidebar/menu"
 
 export const Sidebar = () => {
     return (
         <aside className="w-[275px] min-h-[100svh]">
             <div className="py-0.5">
-                <Link to="/"
-                      className="transition-colors fill-logo flex hover:bg-hovered items-center justify-center rounded-full w-[52px] h-[52px]">
-                    <Logo/>
-                </Link>
+                <Logo/>
+                <Menu/>
             </div>
         </aside>
     );

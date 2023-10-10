@@ -15,12 +15,9 @@ module.exports = {
                 "2xl": "1400px",
             },
         },
-        fontFamily: {
-            "display": ["Helvetica", "Arial", "sans-serif"],
-        },
         extend: {
             colors: {
-                hovered: "hsl(var(--hovered))",
+                hoveredSidebar: "hsl(var(--hovered))",
                 border: "hsl(var(--border))",
                 logo: "hsl(var(--logo))",
                 input: "hsl(var(--input))",
@@ -30,6 +27,7 @@ module.exports = {
                 primary: {
                     DEFAULT: "hsl(var(--primary))",
                     foreground: "hsl(var(--primary-foreground))",
+                    hover: "hsl(var(--primary-hover))",
                 },
                 secondary: {
                     DEFAULT: "hsl(var(--secondary))",

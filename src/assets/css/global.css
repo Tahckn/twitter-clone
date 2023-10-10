@@ -10,11 +10,12 @@
         --card: 0 0% 100%;
         --card-foreground: 222.2 84% 4.9%;
 
-        --popover: 0 0% 100%;
-        --popover-foreground: 222.2 84% 4.9%;
+        --popover: 0, 0%, 100%;
+        --popover-foreground: 0, 0%, 0%;
 
-        --primary: 222.2 47.4% 11.2%;
-        --primary-foreground: 210 40% 98%;
+        --primary: 207, 85%, 58%;
+        --primary-hover: 207, 67%, 52%;
+        --primary-foreground: 0, 0%, 100%;
 
         --secondary: 210 40% 96.1%;
         --secondary-foreground: 222.2 47.4% 11.2%;
@@ -44,11 +45,12 @@
         --card: 222.2 84% 4.9%;
         --card-foreground: 210 40% 98%;
 
-        --popover: 222.2 84% 4.9%;
-        --popover-foreground: 210 40% 98%;
+        --popover: 0, 0%, 0%;
+        --popover-foreground: 0, 0%, 100%;
 
-        --primary: 210 40% 98%;
-        --primary-foreground: 222.2 47.4% 11.2%;
+        --primary: 207, 85%, 58%;
+        --primary-hover: 207, 67%, 52%;
+        --primary-foreground: 20, 0%, 100%;
 
         --secondary: 217.2 32.6% 17.5%;
         --secondary-foreground: 210 40% 98%;
@@ -72,10 +74,14 @@
 
 @layer base {
     * {
-        @apply border-border subpixel-antialiased font-display;
+        @apply border-border subpixel-antialiased;
     }
 
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background text-foreground text-[15px];
+    }
+
+    .sidebar-item {
+        @apply p-3 group-hover:bg-hoveredSidebar fill-logo gap-5 rounded-full inline-flex items-center transition-colors
     }
 }
