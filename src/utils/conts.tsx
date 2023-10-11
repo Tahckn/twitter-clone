@@ -15,6 +15,9 @@ import UserIconActive from "@/assets/icons/userActive.svg"
 import CommunitiesIcon from "@/assets/icons/communities.svg"
 import CommunitiesIconActive from "@/assets/icons/communitiesActive.svg"
 import PremiumIcon from "@/assets/icons/premium.svg"
+import store from "@/store";
+
+const states = store.getState()
 
 export const mainMenu = [
     {
@@ -115,7 +118,7 @@ export const mainMenu = [
         }
     },
     {
-        path: "/profile",
+        path: `/${states.auth?.currentAccount?.username}`,
         title: "Profil",
         icon: {
             active: (
