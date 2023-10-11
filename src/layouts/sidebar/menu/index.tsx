@@ -6,9 +6,9 @@ import {NewTweet} from "@/layouts/sidebar/menu/newTweet";
 
 export const Menu = () => {
     return (
-        <nav className="mt-0.5 mb-1">
+        <nav className="mb-1 mt-0.5">
             {mainMenu.map((menu, index) => (
-                <NavLink key={index} to={menu.path} className="py-[3px] block group">
+                <NavLink key={index} to={menu.path} className="block py-[3px] group">
                     {({isActive}) => (
                         <div
                             className={classNames("sidebar-item",

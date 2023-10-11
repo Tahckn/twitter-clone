@@ -21,6 +21,7 @@ module.exports = {
                 border: "hsl(var(--border))",
                 logo: "hsl(var(--logo))",
                 input: "hsl(var(--input))",
+                item: "hsl(var(--item))",
                 ring: "hsl(var(--ring))",
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
@@ -73,7 +74,12 @@ module.exports = {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
             },
+            boxShadow: {
+                dark: "rgba(255,255,255,0.2) 0px 0px 15px, rgba(255,255,255,0.15) 0px 0px 3px 1px",
+                light: "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;"
+            }
         },
+
     },
     plugins: [require("tailwindcss-animate")],
 }
