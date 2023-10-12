@@ -35,7 +35,7 @@ const auth = createSlice({
         _removeAccount: (state, action) => {
             state.accounts = state.accounts.filter(account => account.id !== action.payload)
             if (state.currentAccount && action.payload === state.currentAccount.id) {
-                this._setCurrentAccount(false)
+                _setCurrentAccount(false)
             }
         },
         _setCurrentAccount: (state, action) => {

@@ -34,7 +34,7 @@ export const More = () => {
                     </div>
                 </button>
             </PopoverTrigger>
-            <PopoverContent align="start" sideOffset={-52} className="w-[318px]">
+            <PopoverContent align="start" sideOffset={-52} className="w-[318px] rounded-xl overflow-hidden">
                 <button
                     className="flex h-14 w-full items-center gap-5 px-4 transition-colors fill-logo group hover:bg-item">
                     <AtIcon/>

@@ -1,14 +1,19 @@
 import {NavLink} from "react-router-dom";
-import {mainMenu} from "@/utils/conts.tsx";
+import {mainMenu} from "@/utils/consts.tsx";
 import classNames from "classnames";
 import {More} from "@/layouts/sidebar/menu/more";
 import {NewTweet} from "@/layouts/sidebar/menu/newTweet";
+import {useAccount} from "@/store/auth/hooks.ts";
 
 export const Menu = () => {
+    const account = useAccount()
+
+
     return (
-        <nav className="mb-1 mt-0.5">
+        <nav className="mb-1 mt-0.5" key={account.id}>
             {mainMenu.map((menu, index) => (
-                <NavLink key={index} to={menu.path} className="block py-[3px] group">
+                <NavLink key={index} to={typeof menu.path === "function" ? menu.path() : menu.path}
+                         className="block py-[3px] group">
                     {({isActive}) => (
                         <div
                             className={classNames("sidebar-item", {"font-bold": isActive})}>
